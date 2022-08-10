@@ -2,8 +2,8 @@
 #include "game/game.h"
 
 int main() {
-    uint16_t width = 10;
-    uint16_t height = 10;
+    uint16_t width;
+    uint16_t height;
     uint16_t choice;
 
     std::cout << "Welcome to Snake game" << std::endl;

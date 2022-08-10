@@ -63,7 +63,7 @@ private:
             this->move_made = false;
         }
     }
-    void turn_top() {
+    void turn_up() {
         if (this->x_direction != 0 && this->move_made) {
             this->x_direction = 0;
             this->y_direction = -1;
@@ -71,7 +71,7 @@ private:
             this->move_made = false;
         }
     }
-    void turn_bottom() {
+    void turn_down() {
         if (this->x_direction != 0 && this->move_made) {
             this->x_direction = 0;
             this->y_direction = 1;
@@ -152,19 +152,24 @@ private:
     void listen_key_press() {
         while (!this->game_over) {
             switch (getch()) {
-                case 97: /* a */
+                case 'A':
+                case 'a':
                     this->turn_left();
                     break;
-                case 115: /* s */
-                    this->turn_bottom();
+                case 'S':
+                case 's':
+                    this->turn_down();
                     break;
-                case 100: /* d */
+                case 'D':
+                case 'd':
                     this->turn_right();
                     break;
-                case 119: /* w */
-                    this->turn_top();
+                case 'W':
+                case 'w':
+                    this->turn_up();
                     break;
-                case 112: /* p */
+                case 'P':
+                case 'p':
                     this->paused = !this->paused;
                     break;
             }
