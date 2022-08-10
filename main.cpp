@@ -17,7 +17,6 @@ int main() {
     } while (choice != 1 && choice != 2);
 
     Snake snake(width, height, choice == 1);
-    std::cout << "Hello, World!" << std::endl;
-    std::cout << '\r';
+    std::cout << std::endl;
     return 0;
 }
