@@ -14,3 +14,11 @@ Controls
     p - pause / resume
 ___
 Run "g++ main.cpp -lncurses" to compile.
+___
+cmake .
+
+make
+
+./snake
+
+to compile with cmake and run.
